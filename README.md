@@ -3,6 +3,8 @@ Example from the "GitHub Actions - The Complete Guide" course. Link: https://www
 
 ## Used Commands
 ```
+nvm use 16.16.0
+
 Inside github-actions-custom-actions/.github/actions/deploy-s3-javascript I had to run:
 npm init -y
 ```
