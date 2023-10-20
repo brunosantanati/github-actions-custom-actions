@@ -7,4 +7,6 @@ nvm use 16.16.0
 
 Inside github-actions-custom-actions/.github/actions/deploy-s3-javascript I had to run:
 npm init -y
+
+npm install @actions/core @actions/github @actions/exec
 ```
