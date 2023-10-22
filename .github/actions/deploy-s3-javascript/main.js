@@ -25,7 +25,7 @@ function run() {
     //core.notice(`Action being executed: ${github.context.action}`);
     //core.notice('Hello from my custom JavaScript Action!')
 
-    const webSiteUrl = `http://${bucket}.s3-website-${bucketRegion}.amazonws.com`
+    const webSiteUrl = `http://${bucket}.s3-website-${bucketRegion}.amazonaws.com`
     core.setOutput('website-url', webSiteUrl); // equivalent to ::set-output
 }
 
