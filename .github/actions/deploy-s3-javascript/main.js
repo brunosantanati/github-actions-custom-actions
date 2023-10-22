@@ -22,8 +22,11 @@ function run() {
     exec.exec(`aws s3 sync ${distFolder} ${s3Uri} --region ${bucketRegion}`);
 
     //github.getOctokit().rest //we can use something like this (maybe not exactly like this) to send requests to GH API
-    core.notice(`Action being executed: ${github.context.action}`);
-    core.notice('Hello from my custom JavaScript Action!')
+    //core.notice(`Action being executed: ${github.context.action}`);
+    //core.notice('Hello from my custom JavaScript Action!')
+
+    const webSiteUrl = `http://${bucket}.s3-website-${bucketRegion}.amazonws.com`
+    core.setOutput('webiste-url', webSiteUrl); // equivalent to ::set-output
 }
 
 run();
