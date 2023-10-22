@@ -10,3 +10,21 @@ npm init -y
 
 npm install @actions/core @actions/github @actions/exec
 ```
+## Bucket Policy Example
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicRead",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": "arn:aws:s3:::gha-custom-action-hosting-brs/*"
+        }
+    ]
+}
+```
